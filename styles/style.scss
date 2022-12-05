@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(84, 130, 255), rgb(100, 255, 134));
+}
+
+i {
+    pointer-events: none;
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input,
+    button {
+        border: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.75rem;
+        margin: 0.1rem;
+        border-radius: 7px;
+    }
+
+    input[type="number"] {
+        width: 100px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.75rem;
+        color: white;
+    }
+    button {
+        cursor: pointer;
+        margin-left: 20px;
+    }
+}
+.sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div.todo {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        margin-top: 10px;
+        transition: all 0.5s ease;
+        word-wrap: break-word;
+        
+        background-color: white;
+        p {
+            
+            background-color: white;
+            color: black;
+            padding: 0.25rem 0.5rem;
+            font-size:30px;
+        }
+
+        p.todo-text {
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            
+        }
+        p.todo-time {
+            width: 30%;
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 250px;
+            position: absolute;
+            margin-left: 500px;
+        }
+
+        button {
+            padding:  0.25rem 0.5rem;
+            background-color: white;
+            font-size: 35px;
+            border:none;
+            cursor: pointer;
+            color: white;
+            // position: relative;
+        }
+        button.complete{
+            margin-right: 15px;
+            background-color: rgb(46, 250, 27);
+            position: absolute;
+            margin-left: 770px;
+
+        }
+        button.trash {
+            background-color: red;
+            margin-left: 830px;
+            position: absolute;
+        }
+    }
+}
+
+.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2rem ;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    } to {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    to{
+        transform: scale(0);
+    }
+}

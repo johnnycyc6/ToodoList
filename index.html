@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .menu {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .menu li {
+            border: 1px solid gray;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .menu li:hover {
+            background-color: #eeeeee;
+            cursor: pointer;
+        }
+
+
+
+        .menu li h3.active {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>
+            <h3>選單1</h3>
+        </li>
+        <li>
+            <h3>選單2</h3>
+        </li>
+        <li>
+            <h3>選單3</h3>
+        </li>
+        <li>
+            <h3>選單4</h3>
+        </li>
+        <li>
+            <h3>選單5</h3>
+        </li>
+        <li>
+            <h3>選單6</h3>
+        </li>
+    </ul>
+    <script>
+        
+            $(".menu li").click(function () {
+    
+                $(this).find("h3").toggleClass("active");
+            });
+        
+    </script>
+
+</body>
+
+
+</html>

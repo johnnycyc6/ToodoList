@@ -55,7 +55,7 @@ form button {
   align-items: center;
 }
 .sec div.todo {
-  width: 70%;
+  width: 60%;
   display: flex;
   align-items: center;
   padding-right: 10px;
@@ -81,7 +81,7 @@ form button {
   margin-left: 10%;
   margin-right: 250px;
   position: absolute;
-  margin-left: 500px;
+  margin-left: 700px;
 }
 .sec div.todo button {
   padding: 0.25rem 0.5rem;
@@ -95,11 +95,11 @@ form button {
   margin-right: 15px;
   background-color: rgb(46, 250, 27);
   position: absolute;
-  margin-left: 770px;
+  margin-left: 1030px;
 }
 .sec div.todo button.trash {
   background-color: red;
-  margin-left: 830px;
+  margin-left: 1090px;
   position: absolute;
 }
 

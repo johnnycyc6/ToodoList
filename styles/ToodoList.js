@@ -1,3 +1,6 @@
+
+
+let sectionDo = document.querySelector("section");
 let add = document.querySelector("#btn1");
 add.addEventListener("click", e =>{
  e.preventDefault();
@@ -26,7 +29,8 @@ if (todoD > 31 || todoD <= 0){
 }
 
 
-let sectionDo = document.querySelector("section");
+
+
 
 
 let toDo = document.createElement("div");
@@ -80,8 +84,75 @@ sectionDo.appendChild(toDo);
 
 form.children[0].value = ""; //傳輸後清空欄位
 
-
-
 })
+
+//按照日期排序
+
+
+function mergeTime(arr1, arr2) {
+    let result = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < arr1.lengh && j < arr2.lengh) {
+        if (Number(arr[i].todoM) > Number(arr2[j].todoM)) {
+            result.push(arr2[j]);
+            j++;
+        }else if (Number(arr[i].todoM) < Number(arr2[j].todoM)) {
+            result.push(arr1[i]);
+            i++;
+        }else if (Number(arr1[i].todoM) == Number(arr2[j].todoM)) {
+            if (Number(arr1[i].todoD) > Number(arr2[j].todoD)) {
+                result.push(arr2[j]);
+                j++;
+            }else{
+                result.push(arr1[i]);
+                i++;
+            }
+        }
+    }
+
+    while (i < arr1.lengh) {
+        result.push(arr1[i]);
+        i++;
+    }
+    while (j < arr2.lengh) {
+        result.push(arr2[j]);
+        j++;
+    }
+
+    return result;
+}
+
+function mergeSort(arr) {
+    if (arr.lengh === 1) {
+        return arr;
+    }else {
+        let middle = Math.floor(arr.lengh / 2);
+        let right = arr.slice(0, middle);
+        let left = arr.slice(middle, arr.lengh);
+        return mergeTime(mergeSort(right), mergeSort(left));
+    }
+}
+
+let sortButton = document.querySelector("div.sort button");
+sortButton.addEventListener("click", () => {
+    //排列資料
+    let sortedArray = mergeSort(JSON.parse(localStorage.getItem("list")));
+    localStorage.setItem("list", JSON.stringify(sortedArray));
+
+    //remove data
+    let len = section.children.lengh;
+    for (let i = 0; i < len; i++) {
+        section.children[0].remove();
+
+    }
+
+    //load data
+    loadData();
+})
+
+
+
 
 

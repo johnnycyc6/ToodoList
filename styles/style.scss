@@ -49,6 +49,7 @@ form {
     button {
         cursor: pointer;
         margin-left: 20px;
+        background-color: rgb(248, 165, 97);
     }
 }
 .sec {
@@ -117,6 +118,24 @@ form {
     opacity: 0.5;
     text-decoration: line-through;
     text-decoration-thickness: 0.2rem ;
+}
+
+div.sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+
+    button {
+        cursor: pointer;
+        margin-left: 20px;
+        border: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.75rem;
+        margin: 0.1rem;
+        border-radius: 7px;
+        background-color: rgb(248, 165, 97);
+    }
 }
 
 @keyframes scaleUp {
